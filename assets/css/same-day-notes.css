@@ -1,0 +1,49 @@
+.same-day-notes {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border);
+    background: var(--entry);
+}
+
+.same-day-notes h3 {
+    margin: 0 0 1rem 0;
+    color: var(--content);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.note-entry {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--theme);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
+.note-entry:last-child {
+    margin-bottom: 0;
+}
+
+.note-entry h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.note-entry h4 a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.note-entry h4 a:hover {
+    text-decoration: underline;
+}
+
+.note-content {
+    color: var(--content);
+    line-height: 1.6;
+}
+
+.note-content p:last-child {
+    margin-bottom: 0;
+}

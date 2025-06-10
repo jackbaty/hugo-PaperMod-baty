@@ -42,6 +42,30 @@
   </div>
   {{- end }}
 
+  {{/* Display notes from the same day */}}
+  {{- $journalDate := .Date.Format "2006-01-02" }}
+  {{- $sameDateNotes := slice }}
+  {{- range where site.RegularPages "Section" "notes" }}
+    {{- $noteDate := .Date.Format "2006-01-02" }}
+    {{- if eq $noteDate $journalDate }}
+      {{- $sameDateNotes = $sameDateNotes | append . }}
+    {{- end }}
+  {{- end }}
+  
+  {{- if $sameDateNotes }}
+  <div class="same-day-notes">
+    <h3>Notes from {{ $journalDate }}</h3>
+    {{- range $sameDateNotes }}
+    <div class="note-entry">
+      <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+      <div class="note-content">
+        {{ .Content }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">

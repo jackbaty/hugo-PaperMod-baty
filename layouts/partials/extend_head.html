@@ -1,4 +1,9 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+
+{{- /* Same-day notes styling */ -}}
+{{- $sameDayNotesCSS := resources.Get "css/same-day-notes.css" | resources.Minify }}
+<link crossorigin="anonymous" href="{{ $sameDayNotesCSS.RelPermalink }}" integrity="{{ $sameDayNotesCSS.Data.Integrity }}" rel="preload stylesheet" as="style">
+
 {{- /* Head custom content area end */ -}}
