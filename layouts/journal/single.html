@@ -57,8 +57,7 @@
     {{- range $sameDateNotes }}
     <div class="note-entry">
       <div class="note-content">
-        {{ .Content }}
-        <a href="{{ .Permalink }}" class="note-permalink" title="Link to {{ .Title }}">#</a>
+        {{ .Content | replaceRE "</p>$" (printf " <a href=\"%s\" class=\"note-permalink\" title=\"Link to %s\">#</a></p>" .Permalink .Title) | safeHTML }}
       </div>
     </div>
     {{- end }}
