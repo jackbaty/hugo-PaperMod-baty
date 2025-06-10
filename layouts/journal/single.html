@@ -58,6 +58,7 @@
     <div class="note-entry">
       <div class="note-content">
         {{ .Content }}
+        <a href="{{ .Permalink }}" class="note-permalink" title="Link to {{ .Title }}">#</a>
       </div>
     </div>
     {{- end }}

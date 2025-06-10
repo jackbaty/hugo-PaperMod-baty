@@ -25,3 +25,17 @@
 .note-content p:last-child {
     margin-bottom: 0;
 }
+
+.note-permalink {
+    margin-left: 0.5rem;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.note-permalink:hover {
+    opacity: 1;
+    color: var(--primary);
+}
