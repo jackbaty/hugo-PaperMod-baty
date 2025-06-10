@@ -51,6 +51,7 @@
       {{- $sameDateNotes = $sameDateNotes | append . }}
     {{- end }}
   {{- end }}
+  {{- $sameDateNotes = sort $sameDateNotes "Date" }}
   
   {{- if $sameDateNotes }}
   <div class="same-day-notes">
