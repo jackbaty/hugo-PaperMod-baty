@@ -54,10 +54,8 @@
   
   {{- if $sameDateNotes }}
   <div class="same-day-notes">
-    <h3>Notes from {{ $journalDate }}</h3>
     {{- range $sameDateNotes }}
     <div class="note-entry">
-      <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
       <div class="note-content">
         {{ .Content }}
       </div>
