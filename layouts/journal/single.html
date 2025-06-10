@@ -3,7 +3,7 @@
 <article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
-    <h1 data-pagefind-meta="title" class="post-title entry-hint-parent">
+    <h1 class="post-title entry-hint-parent">
       {{ .Title }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
@@ -21,7 +21,7 @@
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
+      {{- partial "journal_meta.html" . -}}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
@@ -35,7 +35,7 @@
   {{- end }}
 
   {{- if .Content }}
-  <div data-pagefind-body class="post-content">
+  <div class="post-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}

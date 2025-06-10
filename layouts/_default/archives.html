@@ -20,13 +20,19 @@
     {{- end }}
     {{- end }}
   </h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
-  {{- end }}
+  
 </header>
 
+
+{{- if .Content }}
+<div class="post-single">
+<div class="post-content">
+{{.Content}}
+</div>
+</div>
+  {{- end }}
+  
+  
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
 {{- if site.Params.ShowAllPagesInArchive }}
