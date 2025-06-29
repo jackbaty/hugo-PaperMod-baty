@@ -1,16 +1,17 @@
 .same-day-notes {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    border-top: 1px solid var(--border);
-    background: var(--entry);
+    margin: 1rem 0;
+}
+
+.same-day-notes hr {
+    margin: 10px auto;
+    width: 20%;
+    color: var(--tertiary);
 }
 
 .note-entry {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: var(--theme);
-    border-radius: 8px;
-    border-left: 3px solid var(--primary);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0;
 }
 
 .note-entry:last-child {

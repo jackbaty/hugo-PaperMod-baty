@@ -44,11 +44,13 @@
     $sameDateNotes | append . }} {{- end }} {{- end }} {{- $sameDateNotes = sort
     $sameDateNotes "Date" }} {{- if $sameDateNotes }}
     <div class="same-day-notes">
+        <h3>Notes from today</h3>
         {{- range $sameDateNotes }}
         <div class="note-entry">
             {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param
             "cover.hidden") | default false }} {{- partial "cover.html" (dict
             "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
             <div class="note-content">
                 {{ .Content }}<a
                     href="{{ .Permalink }}"
@@ -58,6 +60,7 @@
                 >
             </div>
         </div>
+        <hr />
         {{- end }}
     </div>
     {{- end }}
