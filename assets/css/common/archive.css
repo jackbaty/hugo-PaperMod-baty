@@ -28,13 +28,15 @@
 
 .archive-entry {
     position: relative;
-    padding: 5px;
+    /* padding: 5px; */
     margin: 10px 0;
 }
 
 .archive-entry-title {
     margin: 5px 0;
     font-weight: 400;
+    font-size: 0.9rem;
+    text-decoration: underline;
 }
 
 .archive-count,
