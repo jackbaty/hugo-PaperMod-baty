@@ -72,13 +72,13 @@
             <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
             {{- end }}
         </ul>
-        {{- if (.Param "ShowPostNavLinks") }} {{- partial "post_nav_links.html"
-        . }} {{- end }} {{- if (and site.Params.ShowShareButtons (ne
-        .Params.disableShare true)) }} {{- partial "share_icons.html" . -}} {{-
-        end }}
-    </footer>
 
-    {{- if (.Param "comments") }} {{- partial "comments.html" . }} {{- end }}
+        {{- if (.Param "comments") }} {{- partial "comments.html" . }} {{- end
+        }} {{- if (.Param "ShowPostNavLinks") }} {{- partial
+        "post_nav_links.html" . }} {{- end }} {{- if (and
+        site.Params.ShowShareButtons (ne .Params.disableShare true)) }} {{-
+        partial "share_icons.html" . -}} {{- end }}
+    </footer>
 </article>
 
 {{- end }}{{/* end main */}}
