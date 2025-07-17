@@ -44,7 +44,7 @@
     $sameDateNotes | append . }} {{- end }} {{- end }} {{- $sameDateNotes = sort
     $sameDateNotes "Date" }} {{- if $sameDateNotes }}
     <div class="same-day-notes">
-        <h3>Notes from today</h3>
+        <h3>Today's notes <a href="/notes/" style="font-weight: 300;font-size: 0.8rem;"> →</a></h3>
         {{- range $sameDateNotes }}
         <div class="note-entry">
             {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param
